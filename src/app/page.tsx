@@ -229,8 +229,10 @@ export default function Home() {
         <section className="bg-red px-4 py-12 text-white sm:px-6">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 sm:flex-row sm:items-center">
             <div>
-              <CalendarDays size={28} />
-              <h2 className="mt-3 font-serif text-4xl font-bold">Check back often for more information.</h2>
+              <h2 className="flex items-center gap-3 font-serif text-4xl font-bold">
+                <CalendarDays size={32} className="shrink-0" />
+                Check back often for more information.
+              </h2>
               <p className="mt-2 text-white/80">We look forward to meeting you.</p>
             </div>
             <Link href="/events" className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-6 py-3 font-bold text-red">

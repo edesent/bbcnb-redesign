@@ -75,7 +75,7 @@ export function Header() {
 export function Footer() {
   return (
     <footer className="bg-ink text-white">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.3fr_1fr_1fr]">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 text-center sm:px-6 lg:grid-cols-[1.3fr_1fr_1fr] lg:text-left">
         <div>
           <div className="inline-flex rounded-md bg-white p-3">
             <Image
@@ -83,10 +83,10 @@ export function Footer() {
               alt={site.fullName}
               width={623}
               height={206}
-              className="h-12 w-auto"
+              className="h-16 w-auto sm:h-20"
             />
           </div>
-          <p className="mt-5 max-w-md text-white/72">
+          <p className="mt-5 max-w-md text-white/72 mx-auto lg:mx-0">
             An independent Baptist church where Deaf and hearing people can worship,
             learn the Bible, and hear the Gospel together.
           </p>
@@ -104,7 +104,7 @@ export function Footer() {
 
         <div>
           <p className="font-bold text-white">Quick Links</p>
-          <div className="mt-4 grid gap-2">
+          <div className="mt-4 flex flex-col items-center gap-2 lg:items-start">
             {quickLinks.map((item) => {
               const Icon = item.icon;
               return (
