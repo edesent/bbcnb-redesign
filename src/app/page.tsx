@@ -173,8 +173,10 @@ export default function Home() {
               </div>
             </div>
             <div className="rounded-md bg-ink p-7 text-white">
-              <MapPin className="text-red" size={30} />
-              <h3 className="mt-4 font-serif text-4xl font-bold">Contact & Location</h3>
+              <h3 className="flex items-center gap-3 font-serif text-4xl font-bold">
+                <MapPin className="shrink-0 text-red" size={32} />
+                Contact & Location
+              </h3>
               <div className="mt-6 space-y-4 text-lg text-white/76">
                 <p className="flex gap-3"><MapPin className="mt-1 shrink-0" size={20} />{site.address}</p>
                 <p className="flex gap-3"><Phone className="mt-1 shrink-0" size={20} />Voice/Text: {site.phone}</p>
