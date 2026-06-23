@@ -8,12 +8,12 @@
   --color-red: #d21f2b;
   --color-red-deep: #8d111a;
   --color-gold: #d7a84a;
-  --color-cream: #f8f0e3;
-  --color-paper: #fffaf1;
+  --color-cream: #f1efed;
+  --color-paper: #f9f8f7;
   --color-sage: #6e8a74;
   --color-sky: #dcebf2;
-  --color-body: #37323a;
-  --color-muted: #706873;
+  --color-body: #2b2730;
+  --color-muted: #6b646f;
 }
 
 * {

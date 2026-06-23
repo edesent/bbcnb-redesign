@@ -4,9 +4,9 @@ import type { SitePage } from "@/content/site";
 
 const accentClass: Record<string, string> = {
   red: "bg-red text-white",
-  gold: "bg-gold text-ink",
-  sage: "bg-sage text-white",
-  sky: "bg-sky text-ink",
+  gold: "bg-red text-white",
+  sage: "bg-red text-white",
+  sky: "bg-red text-white",
   ink: "bg-ink text-white",
 };
 
@@ -22,7 +22,7 @@ export function PageRenderer({ page }: { page: SitePage }) {
               <Icon size={34} />
             </div>
             <div>
-              <p className="font-bold text-gold">{page.eyebrow}</p>
+              <p className="font-bold text-red">{page.eyebrow}</p>
               <h1 className="mt-3 font-serif text-5xl font-bold leading-none sm:text-6xl">
                 {page.title}
               </h1>

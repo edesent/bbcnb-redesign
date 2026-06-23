@@ -41,7 +41,18 @@ export default function Home() {
       <Header />
       <main>
         <section className="relative overflow-hidden bg-ink text-white">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(210,31,43,0.35),transparent_28%),radial-gradient(circle_at_80%_10%,rgba(215,168,74,0.22),transparent_26%),linear-gradient(135deg,#151316_0%,#242025_58%,#3a1116_100%)]" />
+          <video
+            className="absolute inset-0 h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            aria-hidden="true"
+            preload="auto"
+          >
+            <source src="/hero.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_22%,rgba(210,31,43,0.45),transparent_34%),linear-gradient(105deg,rgba(15,12,15,0.93)_0%,rgba(20,17,20,0.82)_42%,rgba(58,17,22,0.55)_100%)]" />
           <div className="relative mx-auto grid min-h-[calc(100svh-140px)] max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.08fr_0.92fr]">
             <div className="min-w-0 max-w-[calc(100vw-2rem)]">
               <div className="inline-flex items-center gap-2 rounded-md border border-white/15 bg-white/10 px-3 py-2 text-sm font-bold text-white/85">
@@ -162,7 +173,7 @@ export default function Home() {
               </div>
             </div>
             <div className="rounded-md bg-ink p-7 text-white">
-              <MapPin className="text-gold" size={30} />
+              <MapPin className="text-red" size={30} />
               <h3 className="mt-4 font-serif text-4xl font-bold">Contact & Location</h3>
               <div className="mt-6 space-y-4 text-lg text-white/76">
                 <p className="flex gap-3"><MapPin className="mt-1 shrink-0" size={20} />{site.address}</p>

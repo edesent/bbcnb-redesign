@@ -10,24 +10,17 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/95 text-white backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-ink/10 bg-white/95 text-ink backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
-        <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+        <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           <Image
-            src="/church-profile.jpg"
-            alt="Bible Baptist Church ASL logo"
-            width={48}
-            height={48}
-            className="h-12 w-12 rounded-full border border-white/20 object-cover"
+            src="/bbc-logo.jpg"
+            alt="Bible Baptist Church for the Deaf & Hearing"
+            width={720}
+            height={250}
+            priority
+            className="h-12 w-auto sm:h-14"
           />
-          <span className="leading-tight">
-            <span className="block font-serif text-2xl font-bold text-white">
-              Bible Baptist Church
-            </span>
-            <span className="block text-sm font-medium text-white/70">
-              Deaf & Hearing in Seguin, TX
-            </span>
-          </span>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
@@ -35,7 +28,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-md px-3 py-2 text-sm font-semibold text-white/80 transition hover:bg-white/10 hover:text-white"
+              className="rounded-md px-3 py-2 text-sm font-semibold text-ink/70 transition hover:bg-ink/5 hover:text-ink"
             >
               {item.label}
             </Link>
@@ -50,7 +43,7 @@ export function Header() {
 
         <button
           type="button"
-          className="rounded-md border border-white/20 p-2 lg:hidden"
+          className="rounded-md border border-ink/20 p-2 text-ink lg:hidden"
           onClick={() => setOpen((value) => !value)}
           aria-label="Toggle navigation"
           aria-expanded={open}
@@ -60,13 +53,13 @@ export function Header() {
       </div>
 
       {open ? (
-        <nav className="border-t border-white/10 bg-coal px-4 py-4 lg:hidden" aria-label="Mobile navigation">
+        <nav className="border-t border-ink/10 bg-white px-4 py-4 lg:hidden" aria-label="Mobile navigation">
           <div className="mx-auto grid max-w-7xl gap-2">
             {nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-md px-3 py-3 font-semibold text-white/85 hover:bg-white/10"
+                className="rounded-md px-3 py-3 font-semibold text-ink/80 hover:bg-ink/5"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
@@ -84,18 +77,14 @@ export function Footer() {
     <footer className="bg-ink text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.3fr_1fr_1fr]">
         <div>
-          <div className="flex items-center gap-3">
+          <div className="inline-flex rounded-md bg-white p-3">
             <Image
-              src="/church-profile.jpg"
-              alt=""
-              width={52}
-              height={52}
-              className="rounded-full border border-white/15"
+              src="/bbc-logo.jpg"
+              alt={site.fullName}
+              width={720}
+              height={250}
+              className="h-12 w-auto"
             />
-            <div>
-              <p className="font-serif text-2xl font-bold">{site.name}</p>
-              <p className="text-white/65">{site.fullName}</p>
-            </div>
           </div>
           <p className="mt-5 max-w-md text-white/72">
             An independent Baptist church where Deaf and hearing people can worship,
