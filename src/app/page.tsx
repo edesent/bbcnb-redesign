@@ -91,17 +91,17 @@ export default function Home() {
             <div className="relative min-w-0 max-w-[calc(100vw-2rem)]">
               <div className="rounded-md border border-white/15 bg-white/10 p-3 shadow-2xl backdrop-blur">
                 <Image
-                  src="/pastor-family.jpg"
-                  alt="Pastor Steve Parker, Mrs. Sabrina, and family"
-                  width={630}
-                  height={630}
+                  src="/church-family.jpg"
+                  alt="The Bible Baptist Church family gathered in Seguin, Texas"
+                  width={1024}
+                  height={576}
                   priority
-                  className="aspect-square w-full rounded-md object-cover"
+                  className="aspect-video w-full rounded-md object-cover"
                 />
               </div>
               <div className="absolute -bottom-5 left-5 right-5 rounded-md bg-paper p-5 text-ink shadow-xl">
-                <p className="font-bold">Pastor Steve Parker, Mrs. Sabrina, and family</p>
-                <p className="mt-1 text-muted">Welcoming Deaf and hearing families in Seguin.</p>
+                <p className="font-bold">Our church family</p>
+                <p className="mt-1 text-muted">Deaf and hearing, worshiping together in Seguin.</p>
               </div>
             </div>
           </div>
