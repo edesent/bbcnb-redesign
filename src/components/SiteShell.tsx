@@ -12,14 +12,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-ink/10 bg-white/95 text-ink backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
-        <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
+        <Link href="/" className="flex items-center self-center" onClick={() => setOpen(false)}>
           <Image
             src="/bbc-logo.jpg"
             alt="Bible Baptist Church for the Deaf & Hearing"
             width={720}
             height={250}
             priority
-            className="h-12 w-auto sm:h-14"
+            className="h-16 w-auto sm:h-[4.5rem]"
           />
         </Link>
 
