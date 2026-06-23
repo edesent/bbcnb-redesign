@@ -14,10 +14,10 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
         <Link href="/" className="flex items-center self-center" onClick={() => setOpen(false)}>
           <Image
-            src="/bbc-logo.jpg"
+            src="/bbc-logo.png"
             alt="Bible Baptist Church for the Deaf & Hearing"
-            width={720}
-            height={250}
+            width={623}
+            height={206}
             priority
             className="h-16 w-auto sm:h-[4.5rem]"
           />
@@ -79,10 +79,10 @@ export function Footer() {
         <div>
           <div className="inline-flex rounded-md bg-white p-3">
             <Image
-              src="/bbc-logo.jpg"
+              src="/bbc-logo.png"
               alt={site.fullName}
-              width={720}
-              height={250}
+              width={623}
+              height={206}
               className="h-12 w-auto"
             />
           </div>

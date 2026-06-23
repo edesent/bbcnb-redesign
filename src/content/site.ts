@@ -25,6 +25,7 @@ export const site = {
   email: "biblebaptistnb@gmail.com",
   facebook: "https://www.facebook.com/BibleBaptistChurchNB/",
   map: "https://www.google.com/maps/search/?api=1&query=1456%20East%20Kingsbury%20St%20Seguin%20TX%2078155",
+  mapEmbed: "https://www.google.com/maps?q=1456%20East%20Kingsbury%20St%20Seguin%20TX%2078155&output=embed",
 };
 
 export const nav = [

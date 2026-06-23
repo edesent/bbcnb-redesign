@@ -181,6 +181,16 @@ export default function Home() {
                 <p className="flex gap-3"><Video className="mt-1 shrink-0" size={20} />Video Phone: {site.videoPhone}</p>
                 <p className="flex gap-3"><Mail className="mt-1 shrink-0" size={20} />{site.email}</p>
               </div>
+              <div className="mt-6 overflow-hidden rounded-md border border-white/10">
+                <iframe
+                  title="Map to Bible Baptist Church"
+                  src={site.mapEmbed}
+                  className="h-64 w-full"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
+              </div>
             </div>
           </div>
         </section>
