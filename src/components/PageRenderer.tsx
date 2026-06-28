@@ -68,6 +68,25 @@ export function PageRenderer({ page }: { page: SitePage }) {
               );
             }
 
+            if (block.type === "embed") {
+              return (
+                <div
+                  key={index}
+                  className="overflow-hidden rounded-md border border-ink/10 bg-white shadow-sm"
+                >
+                  <iframe
+                    src={block.src}
+                    title={block.title}
+                    height={block.height ?? 900}
+                    className="w-full"
+                    style={{ border: "0" }}
+                    loading="lazy"
+                    allow="payment"
+                  />
+                </div>
+              );
+            }
+
             if (block.type === "cards") {
               return (
                 <div key={index} className="grid gap-4 sm:grid-cols-2">

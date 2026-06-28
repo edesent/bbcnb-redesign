@@ -36,6 +36,7 @@ export const nav = [
   { href: "/statement-of-faith", label: "Statement of Faith" },
   { href: "/the-new-birth", label: "The New Birth" },
   { href: "/devotions", label: "Devotions" },
+  { href: "/giving", label: "Giving" },
   { href: "/kjv-for-the-deaf", label: "KJV for the Deaf" },
   { href: "/deaf-mens-retreat", label: "Men's Retreat" },
   { href: "/ladys-retreat", label: "Lady's Retreat" },
@@ -79,6 +80,7 @@ type PageBlock =
   | { type: "paragraph"; text: string }
   | { type: "list"; items: string[] }
   | { type: "cards"; items: { title: string; text: string; icon?: typeof Cross }[] }
+  | { type: "embed"; src: string; title: string; height?: number }
   | { type: "quote"; text: string; cite?: string };
 
 export type SitePage = {
@@ -213,6 +215,27 @@ export const pages: SitePage[] = [
       { type: "paragraph", text: "Without considering these words in their prophetical connection, let us regard them as the invitation of our great Forerunner to His sanctified people. In due time there shall be heard a great voice from heaven to every believer saying, Come up hither." },
       { type: "paragraph", text: "We are not called down to the grave, but up to the skies. Whether our Master shall say go or stay, let us be equally well pleased so long as He indulges us with His presence." },
     ],
+  },
+  {
+    slug: "giving",
+    title: "Giving",
+    eyebrow: "Give Online",
+    description: "Support the ministry of Bible Baptist Church securely online through Tithe.ly.",
+    accent: "red",
+    icon: HandHeart,
+    blocks: [
+      { type: "lead", text: "Thank you for supporting the work of Bible Baptist Church for the Deaf & Hearing. Your tithes and offerings help us preach the Gospel and serve the Deaf and hearing community." },
+      { type: "paragraph", text: "You can give securely below through Tithe.ly. You may give a one-time gift or set up recurring giving, and you do not need an account to give." },
+      {
+        type: "embed",
+        src: "https://give.tithe.ly/?formId=94a84fff-08e1-486b-966f-a8b4ac0790fc",
+        title: "Give to Bible Baptist Church through Tithe.ly",
+        height: 900,
+      },
+      { type: "quote", text: "Every man according as he purposeth in his heart, so let him give; not grudgingly, or of necessity: for God loveth a cheerful giver.", cite: "2 Corinthians 9:7" },
+      { type: "paragraph", text: "If you have any trouble giving online, please contact the church and we will be glad to help." },
+    ],
+    cta: { label: "Give on Tithe.ly", href: "https://give.tithe.ly/?formId=94a84fff-08e1-486b-966f-a8b4ac0790fc" },
   },
   {
     slug: "kjv-for-the-deaf",
