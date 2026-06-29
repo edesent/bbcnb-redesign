@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import type { SitePage } from "@/content/site";
 
@@ -15,8 +16,16 @@ export function PageRenderer({ page }: { page: SitePage }) {
 
   return (
     <main>
-      <section className="bg-ink text-white">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:py-20">
+      <section className="relative overflow-hidden bg-ink text-white">
+        <Image
+          src="/hand.png"
+          alt=""
+          aria-hidden
+          width={332}
+          height={272}
+          className="pointer-events-none absolute -right-8 bottom-0 h-auto w-64 select-none opacity-[0.07] sm:w-80 lg:w-[26rem]"
+        />
+        <div className="relative mx-auto grid max-w-7xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:py-20">
           <div className="flex items-start gap-4">
             <div className={`rounded-md p-4 ${accentClass[page.accent] ?? accentClass.red}`}>
               <Icon size={34} />

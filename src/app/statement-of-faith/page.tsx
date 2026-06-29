@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { Footer, Header } from "@/components/SiteShell";
@@ -17,8 +18,16 @@ export default function StatementOfFaithPage() {
       <Header />
       <main>
         {/* Hero */}
-        <section className="bg-ink text-white">
-          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-24">
+        <section className="relative overflow-hidden bg-ink text-white">
+          <Image
+            src="/hand.png"
+            alt=""
+            aria-hidden
+            width={332}
+            height={272}
+            className="pointer-events-none absolute -right-8 bottom-0 h-auto w-64 select-none opacity-[0.07] sm:w-80 lg:w-[26rem]"
+          />
+          <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:py-24">
             <div className="flex items-center gap-3 text-red">
               <span className="rounded-md bg-red p-2.5 text-white">
                 <BookOpen size={24} />
