@@ -17,16 +17,16 @@ export function PageRenderer({ page }: { page: SitePage }) {
   return (
     <main>
       <section className="relative overflow-hidden bg-ink text-white">
-        <Image
-          src="/hand.png"
-          alt=""
-          aria-hidden
-          width={332}
-          height={272}
-          className="pointer-events-none absolute -right-8 bottom-0 h-auto w-64 select-none opacity-[0.07] sm:w-80 lg:w-[26rem]"
-        />
         <div className="relative mx-auto grid max-w-7xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:py-20">
-          <div className="flex items-start gap-4">
+          <Image
+            src="/hand.png"
+            alt=""
+            aria-hidden
+            width={332}
+            height={272}
+            className="pointer-events-none absolute left-4 top-0 h-auto w-44 select-none opacity-[0.07] sm:left-6 sm:w-56 lg:w-72"
+          />
+          <div className="relative z-10 flex items-start gap-4">
             <div className={`rounded-md p-4 ${accentClass[page.accent] ?? accentClass.red}`}>
               <Icon size={34} />
             </div>
@@ -37,18 +37,18 @@ export function PageRenderer({ page }: { page: SitePage }) {
               </h1>
             </div>
           </div>
-          <p className="max-w-2xl self-end text-xl leading-8 text-white/76">
+          <p className="relative z-10 max-w-2xl self-end text-xl leading-8 text-white/76">
             {page.description}
           </p>
         </div>
       </section>
 
       <section className="bg-paper px-4 py-14 sm:px-6 lg:py-20">
-        <div className="mx-auto max-w-4xl space-y-7">
+        <div className="mx-auto max-w-7xl space-y-7">
           {page.blocks.map((block, index) => {
             if (block.type === "lead") {
               return (
-                <p key={index} className="font-serif text-3xl font-semibold leading-10 text-ink">
+                <p key={index} className="max-w-4xl font-serif text-3xl font-semibold leading-10 text-ink">
                   {block.text}
                 </p>
               );
@@ -56,7 +56,7 @@ export function PageRenderer({ page }: { page: SitePage }) {
 
             if (block.type === "paragraph") {
               return (
-                <p key={index} className="text-lg leading-8 text-body">
+                <p key={index} className="max-w-4xl text-lg leading-8 text-body">
                   {block.text}
                 </p>
               );
