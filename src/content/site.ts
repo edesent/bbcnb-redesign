@@ -94,6 +94,122 @@ export type SitePage = {
   cta?: { label: string; href: string };
 };
 
+export type StatementSection = {
+  id: string;
+  letter: string;
+  title: string;
+  text: string;
+  refs: string[];
+};
+
+export const statementSections: StatementSection[] = [
+  {
+    id: "scriptures",
+    letter: "A",
+    title: "The Scriptures",
+    text: "The Bible includes both the Old and New Testaments, 66 books total, and in the original writings is the inerrant, infallible, verbal plenary inspired Word of God. The Scriptures are the final authority in all matters of faith and practice. The pastor uses the KJV 1611 in ministering.",
+    refs: ["2 Timothy 3:16-17", "2 Peter 1:21", "Psalm 12:6-7"],
+  },
+  {
+    id: "god",
+    letter: "B",
+    title: "God",
+    text: "There is only one true and living God eternally existing as a trinity in unity: God the Father, God the Son, and God the Holy Spirit; three persons, yet one God.",
+    refs: ["Deuteronomy 6:4", "Matthew 28:19", "1 John 5:7"],
+  },
+  {
+    id: "jesus-christ",
+    letter: "C",
+    title: "Jesus Christ",
+    text: "Jesus Christ is eternal and God. He became truly man while remaining truly God through His virgin birth, lived a sinless life, died on the cross for the sins of the world, shed His blood for our atonement, rose bodily on the third day, and ascended to Heaven.",
+    refs: ["John 1:1, 14", "1 Corinthians 15:3-4", "Hebrews 4:15"],
+  },
+  {
+    id: "holy-spirit",
+    letter: "D",
+    title: "The Holy Spirit",
+    text: "The Holy Spirit is God and indwells each believer. He convicts of sin, regenerates the sinner, and seals the saint. The sign gifts, such as tongues and healing, were temporary.",
+    refs: ["John 16:8", "Titus 3:5", "Ephesians 1:13-14"],
+  },
+  {
+    id: "satan",
+    letter: "E",
+    title: "Satan",
+    text: "Satan is a real being, the father of lies and god of this present world. He is in rebellion against God, at war with Christians, and shall be eternally punished in the Lake of Fire.",
+    refs: ["John 8:44", "2 Corinthians 4:4", "Revelation 20:10"],
+  },
+  {
+    id: "creation",
+    letter: "F",
+    title: "Creation",
+    text: "God created the world and all that is in it in six literal, twenty-four hour periods as recorded in Genesis. Evolution cannot be reconciled with the Scriptures.",
+    refs: ["Genesis 1:1", "Exodus 20:11", "Colossians 1:16"],
+  },
+  {
+    id: "fall-of-man",
+    letter: "G",
+    title: "The Fall of Man",
+    text: "Man was created in the image and likeness of God, but deliberately chose to rebel through the fall in Eden. Everyone is born a sinner and is a sinner by choice, deserving condemnation because of sin.",
+    refs: ["Genesis 1:27", "Romans 3:23", "Romans 5:12"],
+  },
+  {
+    id: "heaven-and-hell",
+    letter: "H",
+    title: "Heaven and Hell",
+    text: "Heaven is a literal place with literal and eternal rewards for born-again believers. Unbelievers shall appear at the Great White Throne Judgment and be cast into the Lake of Fire to suffer everlasting conscious punishment.",
+    refs: ["John 14:2-3", "Revelation 20:11-15", "2 Thessalonians 1:9"],
+  },
+  {
+    id: "salvation",
+    letter: "I",
+    title: "Salvation",
+    text: "Eternal life is received by repenting of sin and asking Christ, in faith, to forgive and save. Salvation is available through personal faith in Christ's death and resurrection. Good works do not save but result from the new birth. Eternal security is guaranteed by Christ's resurrection and intercession.",
+    refs: ["Ephesians 2:8-9", "John 3:16", "Romans 10:13"],
+  },
+  {
+    id: "local-church",
+    letter: "J",
+    title: "The Local Church",
+    text: "The local church is a group of baptized believers uniting together to serve Christ through the Great Commission. The church has two ordinances: baptism by immersion and the Lord's Supper as a memorial of Christ's death.",
+    refs: ["Acts 2:41-42", "Matthew 28:19-20", "1 Corinthians 11:23-26"],
+  },
+  {
+    id: "second-coming",
+    letter: "K",
+    title: "The Second Coming",
+    text: "Christ will bodily return to rapture all believers, living and dead. His coming is imminent, premillennial, pretribulational, and personal.",
+    refs: ["1 Thessalonians 4:16-17", "Titus 2:13", "Revelation 22:20"],
+  },
+  {
+    id: "human-sexuality",
+    letter: "L",
+    title: "Human Sexuality",
+    text: "God commands that intimate sexual activity be reserved for marriage between one man and one woman. Men and women are spiritually equal before God, while God has ordained distinct functions in the home and church.",
+    refs: ["Genesis 2:24", "Hebrews 13:4", "1 Corinthians 7:2"],
+  },
+  {
+    id: "abortion",
+    letter: "M",
+    title: "Abortion",
+    text: "Human life begins at conception and the unborn child is a living human being. Abortion constitutes the taking of unborn human life.",
+    refs: ["Psalm 139:13-16", "Jeremiah 1:5", "Exodus 20:13"],
+  },
+  {
+    id: "missions",
+    letter: "N",
+    title: "Missions",
+    text: "God has given the church a great commission to proclaim the Gospel to all nations, using all available means to reach the world as ambassadors of Christ.",
+    refs: ["Matthew 28:19-20", "Mark 16:15", "2 Corinthians 5:20"],
+  },
+  {
+    id: "lawsuits-between-believers",
+    letter: "O",
+    title: "Lawsuits Between Believers",
+    text: "Christians are prohibited from bringing civil lawsuits against other Christians or the church to resolve personal disputes. The church has resources to resolve disputes among members.",
+    refs: ["1 Corinthians 6:1-8"],
+  },
+];
+
 export const pages: SitePage[] = [
   {
     slug: "service-times",
@@ -149,36 +265,6 @@ export const pages: SitePage[] = [
       { type: "quote", text: "Whatever the Bible says is true." },
     ],
     cta: { label: "Read Statement of Faith", href: "/statement-of-faith" },
-  },
-  {
-    slug: "statement-of-faith",
-    title: "Statement of Faith",
-    eyebrow: "Doctrine",
-    description: "The fuller statement of faith preserved from the original site.",
-    accent: "ink",
-    icon: BookOpen,
-    blocks: [
-      {
-        type: "cards",
-        items: [
-          { title: "Sec. A. Scriptures", text: "The Bible includes both the Old and New Testaments, 66 books total, and in the original writings is the inerrant, infallible, verbal plenary inspired Word of God. The Scriptures are the final authority in all matters of faith and practice. The pastor uses the KJV 1611 in ministering." },
-          { title: "Sec. B. God", text: "There is only one true and living God eternally existing as a trinity in unity: God the Father, God the Son, and God the Holy Spirit; three persons, yet one God." },
-          { title: "Sec. C. Jesus Christ", text: "Jesus Christ is eternal and God. He became truly man while remaining truly God through His virgin birth, lived a sinless life, died on the cross for the sins of the world, shed His blood for our atonement, rose bodily on the third day, and ascended to Heaven." },
-          { title: "Sec. D. Holy Spirit", text: "The Holy Spirit is God and indwells each believer. He convicts of sin, regenerates the sinner, and seals the saint. The sign gifts, such as tongues and healing, were temporary." },
-          { title: "Sec. E. Satan", text: "Satan is a real being, the father of lies and god of this present world. He is in rebellion against God, at war with Christians, and shall be eternally punished in the Lake of Fire." },
-          { title: "Sec. F. Creation", text: "God created the world and all that is in it in six literal, twenty-four hour periods as recorded in Genesis. Evolution cannot be reconciled with the Scriptures." },
-          { title: "Sec. G. Fall of Man", text: "Man was created in the image and likeness of God, but deliberately chose to rebel through the fall in Eden. Everyone is born a sinner and is a sinner by choice, deserving condemnation because of sin." },
-          { title: "Sec. H. Heaven and Hell", text: "Heaven is a literal place with literal and eternal rewards for born-again believers. Unbelievers shall appear at the Great White Throne Judgment and be cast into the Lake of Fire to suffer everlasting conscious punishment." },
-          { title: "Sec. I. Salvation", text: "Eternal life is received by repenting of sin and asking Christ, in faith, to forgive and save. Salvation is available through personal faith in Christ's death and resurrection. Good works do not save but result from the new birth. Eternal security is guaranteed by Christ's resurrection and intercession." },
-          { title: "Sec. J. Local Church", text: "The local church is a group of baptized believers uniting together to serve Christ through the Great Commission. The church has two ordinances: baptism by immersion and the Lord's Supper as a memorial of Christ's death." },
-          { title: "Sec. K. Second Coming", text: "Christ will bodily return to rapture all believers, living and dead. His coming is imminent, premillennial, pretribulational, and personal." },
-          { title: "Sec. L. Human Sexuality", text: "God commands that intimate sexual activity be reserved for marriage between one man and one woman. Men and women are spiritually equal before God, while God has ordained distinct functions in the home and church." },
-          { title: "Sec. M. Abortion", text: "Human life begins at conception and the unborn child is a living human being. Abortion constitutes the taking of unborn human life." },
-          { title: "Sec. N. Missions", text: "God has given the church a great commission to proclaim the Gospel to all nations, using all available means to reach the world as ambassadors of Christ." },
-          { title: "Sec. O. Lawsuits Between Believers", text: "Christians are prohibited from bringing civil lawsuits against other Christians or the church to resolve personal disputes. The church has resources to resolve disputes among members." },
-        ],
-      },
-    ],
   },
   {
     slug: "the-new-birth",
