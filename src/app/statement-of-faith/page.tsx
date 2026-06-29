@@ -72,7 +72,7 @@ export default function StatementOfFaithPage() {
                     href={`#${section.id}`}
                     className="group flex items-center gap-3 rounded-md px-3 py-2 text-sm font-semibold text-ink/70 transition hover:bg-white hover:text-ink hover:shadow-sm"
                   >
-                    <span className="flex h-6 w-6 flex-none items-center justify-center rounded bg-ink/8 font-serif text-xs font-bold text-red transition group-hover:bg-red group-hover:text-white">
+                    <span className="flex h-6 min-w-7 flex-none items-center justify-center rounded bg-ink/8 px-1.5 font-serif text-[0.7rem] font-bold tracking-wide text-red transition group-hover:bg-red group-hover:text-white">
                       {section.letter}
                     </span>
                     <span className="hidden lg:inline">{section.title}</span>
@@ -90,7 +90,7 @@ export default function StatementOfFaithPage() {
                   className="scroll-mt-28 rounded-xl border border-ink/10 bg-white p-6 shadow-sm transition hover:shadow-md sm:p-8"
                 >
                   <div className="flex items-start gap-5">
-                    <span className="flex h-14 w-14 flex-none items-center justify-center rounded-lg bg-cream font-serif text-2xl font-bold text-red">
+                    <span className="flex h-14 min-w-14 flex-none items-center justify-center rounded-lg bg-cream px-3 font-serif text-xl font-bold tracking-wide text-red">
                       {section.letter}
                     </span>
                     <div className="min-w-0 flex-1">

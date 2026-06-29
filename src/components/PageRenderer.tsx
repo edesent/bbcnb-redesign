@@ -26,13 +26,13 @@ export function PageRenderer({ page }: { page: SitePage }) {
             height={272}
             className="pointer-events-none absolute left-4 top-0 h-auto w-44 select-none opacity-[0.07] sm:left-6 sm:w-56 lg:w-72"
           />
-          <div className="relative z-10 flex items-start gap-4">
-            <div className={`rounded-md p-4 ${accentClass[page.accent] ?? accentClass.red}`}>
-              <Icon size={34} />
+          <div className="relative z-10 flex items-center gap-5">
+            <div className={`flex flex-none items-center justify-center rounded-xl p-5 ${accentClass[page.accent] ?? accentClass.red}`}>
+              <Icon size={44} strokeWidth={1.75} />
             </div>
             <div>
-              <p className="font-bold text-red">{page.eyebrow}</p>
-              <h1 className="mt-3 font-serif text-5xl font-bold leading-none sm:text-6xl">
+              <p className="font-bold uppercase tracking-[0.18em] text-red">{page.eyebrow}</p>
+              <h1 className="mt-2 font-serif text-5xl font-bold leading-none sm:text-6xl">
                 {page.title}
               </h1>
             </div>
