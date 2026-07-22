@@ -45,7 +45,7 @@ export const nav = [
 export const services = [
   ["Sunday School", "10:15 AM"],
   ["Sunday Morning Worship", "11:00 AM"],
-  ["Sunday Afternoon Disciple Training", "3:00 PM"],
+  ["Sunday Afternoon Disciple Training", "6:00 PM at Marion Baptist Church"],
   ["Wednesday Night Bible Study", "7:00 PM"],
 ];
 
