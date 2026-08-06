@@ -34,6 +34,12 @@ export function Header() {
             </Link>
           ))}
           <Link
+            href="/contact"
+            className="rounded-md px-3 py-2 text-sm font-semibold text-ink/70 transition hover:bg-ink/5 hover:text-ink"
+          >
+            Contact
+          </Link>
+          <Link
             href="/service-times"
             className="ml-2 rounded-md bg-red px-4 py-2 text-sm font-bold text-white transition hover:bg-red-deep"
           >
@@ -98,7 +104,9 @@ export function Footer() {
             <p>{site.address}</p>
             <p>Voice/Text: {site.phone}</p>
             <p>Video Phone: {site.videoPhone}</p>
-            <p>{site.email}</p>
+            <Link href="/contact" className="inline-block font-semibold text-white transition hover:text-red">
+              Send us a message
+            </Link>
           </div>
         </div>
 

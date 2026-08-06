@@ -18,7 +18,6 @@ const churchSchema = {
   name: site.fullName,
   url: "https://bbcnb.us",
   image: "https://bbcnb.us/pastor-family.jpg",
-  email: site.email,
   telephone: "+1-512-757-5017",
   address: {
     "@type": "PostalAddress",
@@ -181,7 +180,13 @@ export default function Home() {
                 <p className="flex gap-3"><MapPin className="mt-1 shrink-0" size={20} />{site.address}</p>
                 <p className="flex gap-3"><Phone className="mt-1 shrink-0" size={20} />Voice/Text: {site.phone}</p>
                 <p className="flex gap-3"><Video className="mt-1 shrink-0" size={20} />Video Phone: {site.videoPhone}</p>
-                <p className="flex gap-3"><Mail className="mt-1 shrink-0" size={20} />{site.email}</p>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-3 font-semibold text-white transition hover:text-red"
+                >
+                  <Mail className="shrink-0" size={20} />
+                  Send us a message
+                </Link>
               </div>
               <div className="mt-6 overflow-hidden rounded-md border border-white/10">
                 <iframe

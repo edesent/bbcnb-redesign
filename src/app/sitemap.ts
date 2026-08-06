@@ -13,5 +13,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${base}/${page.slug}`,
       lastModified: new Date(),
     })),
+    ...["statement-of-faith", "contact"].map((slug) => ({
+      url: `${base}/${slug}`,
+      lastModified: new Date(),
+    })),
   ];
 }

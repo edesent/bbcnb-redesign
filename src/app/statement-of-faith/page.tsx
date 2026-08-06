@@ -132,12 +132,12 @@ export default function StatementOfFaithPage() {
                     How to Be Saved
                     <ArrowRight size={18} />
                   </Link>
-                  <a
-                    href={`mailto:${site.email}`}
+                  <Link
+                    href="/contact"
                     className="inline-flex items-center gap-2 rounded-md border border-white/25 px-6 py-3 font-bold text-white transition hover:bg-white/10"
                   >
                     Contact the Church
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

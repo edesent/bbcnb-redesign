@@ -7,7 +7,6 @@ import {
   ExternalLink,
   HandHeart,
   HeartHandshake,
-  Mail,
   MapPin,
   MessageCircle,
   Phone,
@@ -22,7 +21,6 @@ export const site = {
   address: "1456 East Kingsbury St, Seguin, TX 78155",
   phone: "(512) 757-5017",
   videoPhone: "(210) 429-9592",
-  email: "biblebaptistnb@gmail.com",
   facebook: "https://www.facebook.com/BibleBaptistChurchNB/",
   map: "https://www.google.com/maps/search/?api=1&query=1456%20East%20Kingsbury%20St%20Seguin%20TX%2078155",
   mapEmbed: "https://www.google.com/maps?q=1456%20East%20Kingsbury%20St%20Seguin%20TX%2078155&output=embed",
@@ -40,6 +38,7 @@ export const nav = [
   { href: "/kjv-for-the-deaf", label: "KJV for the Deaf" },
   { href: "/deaf-mens-retreat", label: "Men's Retreat" },
   { href: "/ladys-retreat", label: "Lady's Retreat" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const services = [
@@ -71,7 +70,7 @@ export const quickLinks = [
   { icon: Clock, label: "Service Times", href: "/service-times" },
   { icon: MapPin, label: "Directions", href: site.map },
   { icon: Phone, label: "Call or Text", href: "tel:+15127575017" },
-  { icon: Mail, label: "Email", href: `mailto:${site.email}` },
+  { icon: MessageCircle, label: "Contact Us", href: "/contact" },
   { icon: ExternalLink, label: "Facebook", href: site.facebook },
 ];
 
@@ -284,9 +283,9 @@ export const pages: SitePage[] = [
         ],
       },
       { type: "quote", text: "For whosoever shall call upon the name of the Lord shall be saved.", cite: "Romans 10:13" },
-      { type: "paragraph", text: "If you have questions about salvation, the church would be glad to talk with you by voice, text, video phone, email, or in person." },
+      { type: "paragraph", text: "If you have questions about salvation, the church would be glad to talk with you by voice, text, video phone, the contact form, or in person." },
     ],
-    cta: { label: "Contact the Church", href: `mailto:${site.email}` },
+    cta: { label: "Contact the Church", href: "/contact" },
   },
   {
     slug: "devotions",
@@ -339,7 +338,7 @@ export const pages: SitePage[] = [
         items: [
           { title: "Signed Services", text: "Regular services are both voiced and signed." },
           { title: "Bible Teaching", text: "KJV preaching and Bible study are part of the church's weekly rhythm." },
-          { title: "Personal Help", text: "Visitors can contact the church by voice, text, video phone, or email." },
+          { title: "Personal Help", text: "Visitors can contact the church by voice, text, video phone, or the contact form." },
         ],
       },
     ],
@@ -356,7 +355,7 @@ export const pages: SitePage[] = [
       { type: "paragraph", text: "Speaker: Nick Digman" },
       { type: "paragraph", text: "The original page linked to ASL Man Camp registration through Google Forms." },
     ],
-    cta: { label: "Ask About Retreats", href: `mailto:${site.email}` },
+    cta: { label: "Ask About Retreats", href: "/contact" },
   },
   {
     slug: "ladys-retreat",
